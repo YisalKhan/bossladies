@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="344" viewBox="0 0 1080 344">
+                                                    <g transform="translate(0 -1005.998)">
+                                                        <path d="M-5970,3589.154s65.565,40.2,326.344,67.593S-4890,3606.156-4890,3606.156v327H-5970Z" transform="translate(5970 -2583.156)" data-bind="fill:$root.accentColor" fill="rgba(192, 180.99999999999997, 144, 1)"></path>
+                                                        <path d="M-5970,3589.154s65.565,40.2,326.344,67.593S-4890,3606.156-4890,3606.156v317H-5970Z" transform="translate(5970 -2573.156)" data-bind="fill:$root.bgColor" fill="rgba(36, 36, 36, 1)"></path>
+                                                    </g>
+                                                </svg>

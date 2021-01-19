@@ -1,0 +1,883 @@
+/*
+ Theme Name:     Divi Child
+ Theme URI:      https://www.elegantthemes.com/gallery/divi/
+ Description:    Divi Child Theme
+ Author:         Elegant Themes
+ Author URI:     https://www.elegantthemes.com
+ Template:       Divi
+ Version:        1.0.0
+*/
+
+
+/* =Theme customization starts here
+------------------------------------------------------- */
+body:not(.et-tb) #main-content .container, body:not(.et-tb-has-header) #main-content .container {
+    padding-top: 0px;
+}
+#main-footer {
+    margin-top: 5%;
+}
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.et_left_sidebar #sidebar {
+    padding-top: 25px;
+}
+
+.et_right_sidebar #left-area {
+    width: 100% !important;
+    padding-right: 0% !important;
+    padding-left: 3%;
+    background-color: #f9fbfd;
+}
+
+.header {
+    padding-left: 0px !important;
+}
+
+.header .header-body {
+    padding-left: 10px;
+}
+
+.et_pb_post {
+    width: 45%;
+    float: left;
+    border: #dcdcdc 1px solid;
+    display: flex;
+    position: relative;
+    flex-flow: column;
+    border-radius: .375rem;
+    padding: 14px;
+    margin: 24px 15px;
+}
+
+.header {
+    padding-left: 25px;
+    margin-bottom: 2rem;
+}
+
+.header .header-body {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e3ebf6;
+}
+
+.header-pretitle {
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: #95aac9;
+}
+
+.header-title {
+    font-family: 'Roboto', sans-serif;;
+    margin-bottom: 0;
+    letter-spacing: -.02em;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.strategy-note {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0.75rem 1.5rem rgba(34, 34, 34, .03);
+    position: relative;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #00cccc;
+    border-radius: .5rem;
+}
+
+.strategy-note > h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #00cccc;
+}
+
+.strategy-note > * {
+    justify-self: left;
+    align-self: center;
+    padding: 6px;
+    margin: 0;
+}
+
+.strategy-note > p {
+    font-size: 1rem;
+    padding-top: 0px;
+}
+
+.strategy-note span {
+    font-size: 20px;
+}
+
+.post-actions {
+    margin-top: auto;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .5rem .75rem;
+    font-size: .9375rem;
+    line-height: 1.5;
+    border-radius: .375rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0, 0, 0, 0);
+}
+.branding-bar-btn {
+    cursor: pointer;
+}
+
+/* Modal Popup Code */
+.branding-bar-preview {
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    padding-top: 0;
+    transition: padding-top .2s, opacity .2s;
+}
+
+.branding-bar-preview.visible {
+    padding-top: 20%;
+    opacity: 1;
+}
+
+.branding-bar-preview img {
+    width: 100%;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.custom-control {
+    position: relative;
+    display: block;
+    min-height: 1.40625rem;
+}
+
+.custom-control-input {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 1rem;
+    height: 1.20313rem;
+    opacity: 0;
+}
+
+.custom-control-label {
+    position: relative;
+    margin-bottom: 0;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.custom-control-label::before {
+    position: absolute;
+    top: .20313rem;
+    left: -1.5rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+    content: "";
+    background-color: #e3ebf6;
+    border: #b1c2d9 solid 0;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #ef4036;
+    background-color: #ef4036;
+}
+
+.custom-switch .custom-control-label:before {
+    top: 0;
+    height: 1.5rem;
+    border-radius: .75rem;
+}
+
+.custom-switch .custom-control-label::before {
+    left: -3.5rem;
+    width: 3rem;
+    pointer-events: all;
+    border-radius: .925rem;
+}
+
+.custom-control-label::before, .custom-file-label, .custom-select {
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.custom-control-label:before, .custom-file-label, .custom-select {
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+    background-color: #fff;
+    transform: translateX(1.5rem);
+}
+
+.custom-switch .custom-control-label::after {
+    top: .1875rem;
+    left: -3.3125rem;
+    background-color: #fff;
+}
+
+.custom-control-label::after {
+    position: absolute;
+    top: .20313rem;
+    left: -1.5rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    content: "";
+    background: no-repeat 50%/50% 50%;
+}
+
+.custom-switch .custom-control-label::after {
+    top: .20313rem;
+    left: -3.5rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    background-color: #b1c2d9;
+    border-radius: .5625rem;
+    transition: transform .15s;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999999; /* Sit on top */
+    padding-top: 40px;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 1rem;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border-radius: .5rem
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.custom-switch {
+    padding-left: 3.5rem;
+}
+
+.custom-control .branding-label {
+    /* float: left; */
+}
+
+.copy-comment-btn, .copy-tags-btn, .copy-all-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 0.225rem .6rem;
+    cursor: pointer;
+}
+
+/* Modal Popup Code Ends */
+/* Branding CreateModal */
+#CreateModal .modal-dialog {
+    margin: 0px auto;
+    transform: translate(0, 0);
+}
+
+#CreateModal .modal-dialog-centered::before {
+    height: calc(100vh - 3.5rem);
+}
+
+#CreateModal .modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+    border-radius: .5rem;
+    outline: 0;
+    padding: 0px;
+}
+
+#CreateModal .modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px solid #e3ebf6;
+    border-top-left-radius: calc(.5rem - 1px);
+    border-top-right-radius: calc(.5rem - 1px);
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+}
+
+#CreateModal .modal-header h2 {
+    font-size: 1.25rem;
+}
+
+#CreateModal .modal-header .close {
+    margin: -1.5rem -1.5rem -1.5rem auto;
+    background-color: transparent;
+    border: none;
+}
+
+#CreateModal .close {
+    float: right;
+    font-size: 1.40625rem;
+    font-weight: 600;
+    line-height: 2;
+    color: #000;
+    text-shadow: none;
+    opacity: 1;
+    padding: 1rem 1.5rem;
+}
+
+#CreateModal .modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1.5rem;
+}
+
+#CreateModal .modal-body .col {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#CreateModal .modal-body .col h3 {
+    font-size: 1.0625rem;
+    letter-spacing: -.02em;
+}
+
+#CreateModal .modal-body .col .mt-1 {
+    margin-top: .1875rem !important;
+    font-size: .8375rem;
+    font-family: inherit;
+}
+
+#CreateModal .modal-body .col .mt-3 {
+    margin-top: .75rem !important;
+}
+
+#CreateModal .modal-body .col .mt-3 .badge {
+    vertical-align: middle;
+    display: inline-block;
+    padding: .33em .5em;
+    font-size: 76%;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .375rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+#CreateModal .modal-body .col .mt-3 .badge-secondary {
+    color: #fff;
+    background-color: grey;
+}
+
+.col-auto {
+    padding-right: 12px;
+    padding-left: 12px;
+}
+#CreateModal .modal-body .col-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+}
+
+#CreateModal .modal-body .col-auto .btn-info {
+    color: #fff;
+    background-color: #00cccc;
+    border-color: #00cccc;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: .5rem .75rem;
+    font-size: .9375rem;
+    line-height: 1.5;
+    border-radius: .375rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+#CreateModal .btn-canva-icon, #CreateModal .btn-canva-icon-right {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #00c4cc;
+    color: #fff;
+    font-weight: 600;
+    transition: background-color .1s linear;
+}
+
+#CreateModal .btn-canva-icon {
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #00c4cc;
+    border: 1px solid transparent;
+    padding: .5rem .75rem;
+    font-size: .9375rem;
+    line-height: 1.5;
+    border-radius: .375rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+/* Branding Create Modal Ends */
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.5rem;
+}
+
+.card-body, .card-footer-boxed {
+    padding: 1rem;
+}
+
+.card-body .row .col-auto label {
+    display: block;
+    text-align: center;
+    font-size: .9375rem;
+}
+
+.justify-content-around {
+    justify-content: space-around !important;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.input-group-prepend {
+    margin-right: -1px;
+}
+
+.input-group-append, .input-group-prepend {
+    display: flex;
+}
+
+.input-group > .StripeElement:not(:first-child), .input-group > .custom-select:not(:first-child), .input-group > .form-control:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.StripeElement:not(.custom-select), .form-control:not(.custom-select) {
+    padding-right: 0;
+}
+
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: .5rem .75rem;
+    margin-bottom: 0;
+    font-size: .9375rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #95aac9;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #fff;
+    border: 1px solid #d2ddec;
+    border-radius: .375rem;
+}
+
+.StripeElement, .form-control {
+    display: block;
+    width: 100%;
+    padding: .5rem .75rem !important;
+    font-size: .9375rem !important;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #222 !important;
+    background-color: #fff !important;
+    background-clip: padding-box;
+    border: 1px solid #d2ddec !important;
+    border-radius: .375rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.input-group > .StripeElement, .input-group > .custom-file, .input-group > .custom-select, .input-group > .form-control, .input-group > .form-control-plaintext {
+    position: relative;
+    flex: 1 1 0%;
+    min-width: 0;
+    margin-bottom: 0;
+}
+
+.input-group > .input-group-prepend > .input-group-text {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block !important;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+a.btn {
+    background-color: #00cccc;
+    color: white;
+    padding: .125rem .5rem;
+    border-radius: .25rem;
+    font-size: .8125rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-shadow: none;
+    display: inline-block;
+}
+
+.file-btn {
+    position: relative;
+}
+
+.file-btn input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    cursor: pointer;
+}
+
+.upload-demo .upload-demo-wrap,
+.upload-demo .upload-result,
+.upload-demo.ready .upload-msg,
+.upload-logo-demo .upload-demo-logo-wrap,
+.upload-logo-demo .upload-logo-result,
+.upload-logo-demo.ready .upload-msg {
+    display: none;
+}
+
+.upload-demo.ready .upload-demo-wrap,
+.upload-logo-demo.ready .upload-demo-logo-wrap {
+    display: block;
+}
+
+.upload-demo.ready .upload-result,
+.upload-logo-demo.ready .upload-logo-result {
+    display: inline-block;
+    background-color: #4793df;
+    border: none;
+    color: #fff;
+    padding: .210rem .7rem;
+    border-radius: 3px;
+    font-size: .8125rem;
+    cursor: pointer;
+}
+
+.upload-demo-wrap,
+.upload-demo-logo-wrap {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.upload-msg {
+    text-align: center;
+    padding: 50px;
+    font-size: 22px;
+    color: #aaa;
+    width: 260px;
+    margin: 50px auto;
+    border: 1px solid #aaa;
+}
+
+.p-2, .validation-summary-errors {
+    padding: .375rem!important;
+}
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(34,34,34,.075)!important;
+}
+.showSamplePosts .post-image {
+    display: block;
+}
+.post-image {
+    width: 432px;
+}
+.showSamplePosts .scaled-preview-290 {
+    margin-top: -8px;
+}
+.scaled-preview-290 {
+    height: 116px;
+}
+
+.small, form.recaptcha-custom-badge div.recaptcha-badge, small {
+    font-size: .8125rem;
+    font-weight: 400;
+}
+
+.btn-info.pulse:after {
+    content: '';
+    opacity: 0;
+    display: block;
+    border: 3px solid #4793df;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 8px;
+    animation: animate-border 1.5s ease-out;
+    animation-iteration-count: 10;
+}
+.btn-lg {
+    padding: .75rem 1.25rem;
+    font-size: .9375rem;
+    line-height: 1.5;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.showSamplePosts .scaled-preview-360 {
+    margin-top: -45px;
+}
+.showSamplePosts .scaled-preview  {
+    margin-top: -45px;
+}
+.btn-info:disabled {
+    color: #fff;
+    background-color: #4793df;
+    border-color: #4793df;
+}
+.btn:disabled {
+    opacity: .65;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: none;
+    background: none;
+    background-color: #f0f0f0 !important;
+    color: #000000 !important;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-indent: 3px;
+}
+.ui-accordion .ui-accordion-icons {
+    padding-left: 1.5rem;
+}
+.ui-accordion .ui-accordion-header {
+    border-radius: 6px !important;
+    border-bottom: 1px solid #00cccc;
+    padding: 1em 1em 1em 2em;
+    font-size: 1rem;
+}
+.ui-accordion .ui-accordion-header.ui-state-hover {
+    border-bottom: 1px solid #00cccc;
+}
+
+.ui-accordion .ui-accordion-header#ui-id-1,
+.ui-accordion .ui-accordion-header#ui-id-3,
+.ui-accordion .ui-accordion-header#ui-id-5 {
+    border-bottom: 1px solid #00cccc;
+    border-bottom-left-radius: 0px!important;
+    border-bottom-right-radius: 0px !important;
+}
+.ui-widget-content {
+    border: 1px solid #edf2f9;
+}
+.ui-widget button {
+    font-size: .8125rem;
+}
+#main-content .container:before {
+    content: none;
+}
+.branding-top-cols {
+    margin-right: 5%;
+}
+.previewContainer .row.align-items-center {
+    margin-right: 0px;
+}
+.canva-notice {
+    font-size: 11px;
+}
+.canva-notice b {
+    color: red;
+}
+.canva-notice a {
+    text-decoration: underline;
+}
+.header-pretitle {
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: #95aac9;
+    font-size: .625rem;
+}
+
+/* Create Branding Bar Preview Ends */
+@media (min-width: 992px) {
+    .strategy-note {
+        grid-template-columns: 300px auto;
+    }
+
+    .strategy-note > * {
+        padding: 26px;
+    }
+
+    .strategy-note > h2 > span {
+        display: block;
+    }
+
+    .strategy-note > * {
+        padding: 26px;
+    }
+
+    .modal-lg, .modal-xl {
+        max-width: 800px;
+    }
+
+    .col-lg-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .mt-lg-0, .my-lg-0 {
+        margin-top: 0 !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .modal-xl {
+        max-width: 1140px;
+    }
+
+    .p-xl-4 {
+        padding: 1.5rem !important;
+    }
+}
+
+@media (min-width: 576px) {
+    .modal-dialog-centered {
+        min-height: calc(100% - 3.5rem);
+    }
+
+    .modal-dialog-centered::before {
+        height: calc(100vh - 3.5rem);
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+    #steps {
+        min-width: 500px;
+    }
+}
